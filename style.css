@@ -5,14 +5,10 @@ body {
   background-color: #000;
   color: #fff;
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow-x: hidden;
 }
 
 .page {
-    display: none; /* 🔹 AHORA TODAS LAS PÁGINAS ESTÁN OCULTAS POR DEFECTO */
+  display: none;
 }
 
 .page.active {
@@ -26,18 +22,7 @@ body {
 .intro-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  min-height: 100vh;
-}
-
-#global-title h1 {
-  font-size: 5em;
-  color: #e94560;
-  animation: blink 1.5s infinite;
-  text-shadow: 0 0 10px #e94560, 0 0 20px #ff5f7e;
-  margin-top: 20px;
 }
 
 button {
@@ -53,24 +38,5 @@ button {
 #memory-page {
   background-image: url('https://i.imgur.com/sAS9ZuK.jpeg');
   background-size: cover;
-  min-height: 100vh;
-  padding: 20px;
   color: white;
-  text-align: center;
-}
-
-#memory-text {
-  max-width: 80%;
-  margin: auto;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-#quiz-container {
-  display: none;
-}
-
-#quiz-container.active {
-  display: block;
 }
