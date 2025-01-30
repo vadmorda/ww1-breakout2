@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WW1: Breakout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #000; color: #fff;">
+  <!-- Página Inicial -->
+  <div id="page-intro" class="page active" style="min-height: 100vh; padding: 20px; background-color: #000;">
+    <div id="global-title">
+      <h1>WW1: Breakout</h1>
+    </div>
+    <div class="intro-content" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 20px; max-width: 90%; margin: auto; flex-wrap: wrap;">
+        <img src="https://i.imgur.com/QmvVrYt.jpeg" alt="Jacques in WWI" style="max-width: 25%; height: auto; border-radius: 10px;">
+        <div style="max-width: 60%;">
+          <h2>
+            Jacques has managed to overcome the field of barbed wire. He now arrives at a semi-destroyed farmhouse. Cautiously, he investigates the area, wary of any potential enemies. However, he only finds a few cats and a couple of goats. It seems like a safe place to rest before continuing his journey northwest.
+          </h2>
+        </div>
+      </div>
+      <div style="margin-top: 20px; width: 100%; display: flex; justify-content: center;">
+        <button class="button" id="start-challenge-1" style="padding: 15px 30px; font-size: 1.5em; background-color: #e94560; color: white; border: none; border-radius: 8px; cursor: pointer;">Enter War Zone</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Página del Reto 1 -->
+  <div id="challenge-1" class="page hidden" style="min-height: 100vh; padding: 20px; background-color: #000; color: white; text-align: center;">
+    <h1>Jacques' Rest</h1>
+    <p id="challenge-1-text" style="max-width: 80%; margin: auto; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 10px;">
+      Inside a room with a dirty cherry wood floor, Jacques sits down, leaning his back against the wall. He removes his supply bag and rummages inside, pulling out a can of stewed meat and a piece of hard bread. He knows he must find more water. Now, he eats slowly, savoring the moment—it will be his only meal of the day. Later, he plans to rest for two or three hours before heading out under the cover of darkness. It is the safest time to travel through open fields. By dawn, he will have reached the forest, where the thick foliage will offer him protection. As he finishes eating, he lies down on the ground, and memories begin to flood his mind...
+    </p>
+    <button class="button" id="read-memory">Read His Memory</button>
+  </div>
+  
+
+
+  <!-- Página de Memoria -->
+  <div id="memory-page" class="page hidden" style="min-height: 100vh; padding: 20px; background-image: url('https://i.imgur.com/sAS9ZuK.jpeg'); background-size: cover; color: white; text-align: center;">
+    <h1>Jacques' Memory</h1>
+    <p id="memory-text" style="max-width: 80%; margin: auto; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 10px;">
+      [Insert full historical text here]
+    </p>
+    <div id="quiz-container" class="hidden">
+      <h2 id="question-text">Loading question...</h2>
+      <div id="answers-container"></div>
+      <p id="error-message" class="hidden" style="color: red;">Incorrect! Try again.</p>
+    </div>
+    <button id="next-question" class="hidden" style="margin-top: 20px; padding: 10px 20px; font-size: 1.2em; background-color: #e94560; color: white; border: none; border-radius: 8px; cursor: pointer;">Next</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
