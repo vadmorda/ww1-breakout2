@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("✅ JavaScript cargado correctamente.");
+    console.log("✅ JavaScript loaded correctly.");
 
     // 🔹 Ocultar TODAS las páginas menos la de inicio
     document.querySelectorAll(".page").forEach(page => page.classList.add("hidden"));
@@ -50,11 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
             question: "What was the longest battle of World War I, lasting from February to December 1916?",
             answers: ["A) Battle of Verdun", "B) Battle of Ypres", "C) Battle of the Marne"],
             correct: 0
-        },
-        {
-            question: "Why did Germany choose Verdun for a major attack?",
-            answers: ["A) It was an industrial city", "B) It had a strong British presence", "C) It was a symbolic and strategic location for France"],
-            correct: 2
         }
     ];
 
@@ -88,6 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    if (quizContainer) {
+        loadQuestion();
+    }
+});
     if (quizContainer) {
         loadQuestion();
     }
