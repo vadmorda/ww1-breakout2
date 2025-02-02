@@ -8,21 +8,19 @@ body {
 }
 
 .page {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .page.active {
-  display: block;
+  visibility: visible;
+  position: relative;
 }
 
 .hidden {
-  display: none !important;
-}
-
-.intro-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: none;
 }
 
 button {
@@ -35,8 +33,113 @@ button {
   cursor: pointer;
 }
 
-#memory-page {
-  background-image: url('https://i.imgur.com/sAS9ZuK.jpeg');
-  background-size: cover;
+/* 🔹 Ajustes para el cuestionario */
+#quiz-container {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#answers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answer-button {
+  padding: 10px;
+  font-size: 1.2em;
+  background-color: #444;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.answer-button:hover {
+  background-color: #e94560;
+}
+#memory-text {
+  max-width: 60%;
+  max-height: 400px; /* 🔹 Limits the text box height */
+  margin: auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: auto; /* 🔹 Enables vertical scrolling */
+  text-align: left;
+  line-height: 1.5;
+  font-size: 1.1em;
+  width: 80%;
+}
+/* Challenge 2 Layout */
+.challenge-2-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.story-section {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.video-section {
+    flex: 1;
+    text-align: center;
+}
+
+.video-section iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Challenge 2 Quiz */
+#quiz-container-2 {
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#answers-container-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answer-button {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.answer-button:hover {
+    background-color: #e94560;
+}
+
+/* Enigma Challenge */
+#transition-page {
+    text-align: center;
+    padding: 20px;
 }
